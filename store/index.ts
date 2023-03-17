@@ -14,4 +14,4 @@ const makeStore: MakeStore<Store<State>> = () => {
   return createStore(combinedReducer)
 }
 
-export const store = createWrapper<Store<State>>(makeStore, {debug: true})
+export const store = createWrapper<Store<State>>(makeStore)
