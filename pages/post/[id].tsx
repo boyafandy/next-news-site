@@ -55,9 +55,7 @@ export const getServerSideProps = store.getServerSideProps(
       } 
 
       const comments = await fetchComments(params.id)
-      console.log(comments);
       const post = await fetchPost(params.id)
-      console.log(post);
       
       store.dispatch({type: UPDATE_POST_ACTION, post})
       store.dispatch({type: UPDATE_COMMENTS_ACTION, comments})
